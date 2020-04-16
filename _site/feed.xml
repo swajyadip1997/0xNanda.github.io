@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-04-16T11:21:00+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">0xNanda</title><subtitle>By &lt;b&gt;&lt;a href=&quot;https://github.com/0xNanda&quot;&gt;@0xNanda&lt;/a&gt;&lt;/b&gt;</subtitle><author><name>Hardik Nanda</name></author><entry><title type="html">Open Redirects - Everything That You Should Know</title><link href="http://localhost:4000/Open-Redirects-Everything-That-You-Should-Know/" rel="alternate" type="text/html" title="Open Redirects - Everything That You Should Know" /><published>2020-04-16T00:00:00+05:30</published><updated>2020-04-16T00:00:00+05:30</updated><id>http://localhost:4000/Open-Redirects-Everything-That-You-Should-Know</id><content type="html" xml:base="http://localhost:4000/Open-Redirects-Everything-That-You-Should-Know/">&lt;p&gt;&lt;img src=&quot;https://i.ibb.co/7trzHRB/g1632.png&quot; alt=&quot;banner&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hey There! In this post I’ll be going to explain everything that is necessary for a layman(not really) to understand Open Redirects. Let’s start!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Open Redirect or Open Redirection is a situation in which a website redirects or sends the user to another website by taking parameter value as the destination.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;URL - &lt;code class=&quot;highlighter-rouge&quot;&gt;http://site.com/redir?url=http://www.google.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;parameter name - &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;parameter value - &lt;code class=&quot;highlighter-rouge&quot;&gt;http://www.google.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;destination(the webiste to which you will be redirected) - &lt;code class=&quot;highlighter-rouge&quot;&gt;http://www.google.com&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;javascript-based-redirection&quot;&gt;Javascript Based Redirection&lt;/h3&gt;
+
+&lt;p&gt;The URL - &lt;code class=&quot;highlighter-rouge&quot;&gt;http://site.com/redir?url=http://www.google.com&lt;/code&gt; will send you or redirect you to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://www.google.com&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s take a look at the code which is the cause of our redirection.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://site.com/redir?url=http://www.google.com&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;searchParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;What’s happening is that, the code is taking the parameter value from the URL which is &lt;code class=&quot;highlighter-rouge&quot;&gt;http://www.google.com&lt;/code&gt; and then it’s assigning the value to &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Window/location&quot; target=&quot;_blank&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;window.location&lt;/code&gt;&lt;/a&gt; and that’s how you are getting redirected to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://www.google.com&lt;/code&gt;. And this is what we call a - Javascript Based Redirection.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;window.location&lt;/code&gt; is the sink here, whereas &lt;code class=&quot;highlighter-rouge&quot;&gt;param.searchParams.get('url');&lt;/code&gt; is the source.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; When you’re trying to fuzz the parameters, remember that Javascript Based Redirections give you &lt;code class=&quot;highlighter-rouge&quot;&gt;200&lt;/code&gt; and not &lt;code class=&quot;highlighter-rouge&quot;&gt;3xx&lt;/code&gt; as a response code. Also, it’s usefulness is only restricted to DOM XSS.&lt;/p&gt;
+
+&lt;h3 id=&quot;header-based-redirection&quot;&gt;Header Based Redirection&lt;/h3&gt;
+
+&lt;p&gt;Header Based Redirection are the redirections triggered by the server side scripts like php, java, etc. And, this redirection is the OG as it gives &lt;code class=&quot;highlighter-rouge&quot;&gt;3xx&lt;/code&gt; as a response code and it can uplifted up to make SSRFs work.&lt;/p&gt;
+
+&lt;p&gt;Let’s see an example php code that does this redirection :&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$redirect_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Location:&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$redirect_URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;As usual, the parameter value is getting stored into the location header which leads us to our redirection. It can be chained with vulnerabilities like SSRF, OAuth token disclosure and CLRF Injection. It can also be used for phising.&lt;/p&gt;
+
+&lt;p&gt;Functionalities you should look upto are - login, signup, register, logout.&lt;/p&gt;
+
+&lt;h3 id=&quot;list-of-quality-bypasses&quot;&gt;List of Quality Bypasses&lt;/h3&gt;
+
+&lt;p&gt;Here’s a short list of bypasses(payloads) that I’ve collected from this &lt;a href=&quot;https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html&quot; target=&quot;_black&quot;&gt;source&lt;/a&gt; after going through some HackerOne reports and have tried on different targets to bypass the filters.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;https:www.google.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HtTp://google.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http\x3A\x2F\x2Fgoogle.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;//google。com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;x00http://google.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;////216.58.214.206&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/\216.58.214.206&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;x20http://www.google.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;https://www.google.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;hthttp://tp://www.google.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;。/www.google.com&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dorks--parameter-names&quot;&gt;Dorks &amp;amp; Parameter Names&lt;/h3&gt;
+
+&lt;p&gt;Some useful google dorks:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;site:target.com AND inurl:url=http(s)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;site:target.com AND inurl:u=http(s)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;site:target.com AND inurl:redirect?http(s)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;site:target.com AND inurl:redirect=http(s)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;site:target.com AND inurl:link=http(s)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some parameter names that need attention while looking for Open Redirects from &lt;a href=&quot;https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html&quot; target=&quot;_black&quot;&gt;Pentester Land&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?next=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?url=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?dest=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?redirect=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?returnTo=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?go=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?redirect_uri&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?continue=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?return_path=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?externalLink=&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;?URL=&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More Resources -&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html&quot; target=&quot;_blank&quot;&gt;https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md&quot; target=&quot;_blank&quot;&gt;https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.detectify.com/2019/05/16/the-real-impact-of-an-open-redirect/&quot; target=&quot;_blank&quot;&gt;https://blog.detectify.com/2019/05/16/the-real-impact-of-an-open-redirect/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s all for this post, you can reach out to me on &lt;a href=&quot;https://twitter.com/0xNanda&quot;&gt;twitter&lt;/a&gt; and tell if you liked it or not, suggestions and criticism would be welcomed.&lt;/p&gt;</content><author><name>Hardik Nanda</name></author><summary type="html">Hey There! In this post I’ll be going to explain everything that is necessary for a layman(not really) to understand Open Redirects. Let’s start!</summary></entry></feed>
