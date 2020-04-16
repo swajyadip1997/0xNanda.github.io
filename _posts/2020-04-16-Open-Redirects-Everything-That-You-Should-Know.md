@@ -74,7 +74,7 @@ Some useful google dorks:
 - `site:target.com AND inurl:redirect=http(s)`
 - `site:target.com AND inurl:link=http(s)`
 
-Some parameter names that need attention while looking for Open Redirects from <a href="https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html" target=_black>Pentester Land</a>:
+Some parameter names that need attention while looking for Open Redirects from <a href="https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html" target="_blank">Pentester Land</a>:
 
 - `?next=`
 - `?url=`
