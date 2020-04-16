@@ -90,9 +90,9 @@ Some parameter names that need attention while looking for Open Redirects from <
 
 More Resources -
 
-- <a href="https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html" target=_blank>https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html</a>
-- <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md" target=_blank>https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md</a>
-- <a href="https://blog.detectify.com/2019/05/16/the-real-impact-of-an-open-redirect/" target=_blank>https://blog.detectify.com/2019/05/16/the-real-impact-of-an-open-redirect/</a>
+- <a href="https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html" target="_blank">https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html</a>
+- <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md" target="_blank">https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md</a>
+- <a href="https://blog.detectify.com/2019/05/16/the-real-impact-of-an-open-redirect/" target="_blank">https://blog.detectify.com/2019/05/16/the-real-impact-of-an-open-redirect/</a>
 
 
 That's all for this post, you can reach out to me on <a href="https://twitter.com/0xNanda">twitter</a> and tell if you liked it or not, suggestions and criticism would be welcomed.
