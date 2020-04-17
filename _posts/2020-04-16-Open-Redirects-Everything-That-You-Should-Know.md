@@ -49,7 +49,7 @@ Functionalities you should look upto are - login, signup, register, logout.
 
 ### List of Quality Bypasses
 
-Here's a short list of bypasses(payloads) that I've collected from this <a href='https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html' target=_black>source</a> after going through some HackerOne reports and have tried on different targets to bypass the filters.
+Here's a short list of bypasses(payloads) that I've collected from this <a href='https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html' target="_blank">source</a> after going through some HackerOne reports and have tried on different targets to bypass the filters.
 
 - `https:www.google.com`
 - `HtTp://google.com`
