@@ -3,7 +3,7 @@ title: "Open Redirects - Everything That You Should Know"
 layout: post
 ---
 
-![banner](https://i.ibb.co/7trzHRB/g1632.png)
+![banner](https://i.ibb.co/PDF9Xgn/g917.png)
 
 Hey There! In this post I'll be going to explain everything that is necessary for a layman(not really) to understand Open Redirects. Let's start!
 
