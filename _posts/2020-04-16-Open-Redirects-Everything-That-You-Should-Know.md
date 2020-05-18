@@ -47,6 +47,17 @@ As usual, the parameter value is getting stored into the location header which l
 
 Functionalities you should look upto are - login, signup, register, logout.
 
+### Meta Refresh Redirection
+
+Meta Refresh Redirection is a client side redirection. It occurs within your browser and requires no server side interaction. Meta tags are inserted into the head tag.
+{% highlight html %}
+<head>
+  <meta content="1;url='http://www.google.com';" http-equiv="refresh"/>
+</head>
+{% endhighlight %}
+
+The above meta tag, if inserted in a HTML document, will redirect you to `http://www.google.com` after waiting for one second. These type of redirections (Javscript Based and Meta Refresh) are client side redirections and hence they would always puke out `200` as the response code. The exploitation is just same as Javascript Based Redirection, the only thing you have to keep an eye on is the meta tag and the JS content.
+
 ### List of Quality Bypasses
 
 Here's a short list of bypasses(payloads) that I've collected from this <a href='https://pentester.land/cheatsheets/2018/11/02/open-redirect-cheatsheet.html' target="_blank">source</a> after going through some HackerOne reports and have tried on different targets to bypass the filters.
